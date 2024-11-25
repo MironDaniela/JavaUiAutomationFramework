@@ -16,8 +16,7 @@
         <selenium-api.version>4.25.0</selenium-api.version>
         <selenium-driver.version>4.25.0</selenium-driver.version>
         <javafaker.version>1.0.2</javafaker.version>
-    </properties>
-
+            </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
         <dependency>
@@ -62,7 +61,7 @@
             <artifactId>selenium-edge-driver</artifactId>
             <version>${selenium-driver.version}</version>
         </dependency>
-    </dependencies>
+               </dependencies>
 
 </project>
 
