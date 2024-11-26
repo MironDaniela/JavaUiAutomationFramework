@@ -2,6 +2,7 @@ package org.JavaAutomation;
 
 import org.JavaAutomation.managers.DriverManager;
 import org.JavaAutomation.managers.RandomDataManager;
+import org.JavaAutomation.managers.ScrollManager;
 import org.openqa.selenium.*;
 
 public class TestRunner {
@@ -57,6 +58,7 @@ public class TestRunner {
 
 
         WebElement privacyToggleBar = driver.findElement(By.name("agree"));
+        ScrollManager.scrollToElement(privacyToggleBar);
 
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", privacyToggleBar);
         Thread.sleep(5000);
