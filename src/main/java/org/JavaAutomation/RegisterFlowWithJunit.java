@@ -28,7 +28,6 @@ public void beforeEachTest(){
     homePage = new HomePage(driver);
     homePage.navigateToRegisterPage();
     registerPage= new RegisterPage(driver);
-
 }
 
     @Test
@@ -37,7 +36,6 @@ public void beforeEachTest(){
     public void registerFlowWithValidDateRedirectsTheUserToAccountPage() throws InterruptedException {
 
             // Generate random data
-
             String firstName = RandomDataManager.getRandomFirstName();
             String lastName = RandomDataManager.getRandomLastName();
             String email = RandomDataManager.getRandomEmail();
