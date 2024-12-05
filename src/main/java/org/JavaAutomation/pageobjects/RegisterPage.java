@@ -32,7 +32,7 @@ public class RegisterPage extends Page{
         lastNameInput.sendKeys(lastName);
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
-        System.out.println("The form was completed :" + "Firstname" + firstName + "Lastname"  +  lastName +  "Email"  + email +  "Password"  + password);
+        System.out.println("The form was completed :" + " Firstname: " + firstName +  ", Lastname: "  +  lastName +  ", Email: "  + email +  ", Password: "  + password);
 
         }
 
