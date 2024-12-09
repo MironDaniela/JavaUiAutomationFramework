@@ -18,6 +18,7 @@ public class DriverManager {
             case "CHROME" :
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins*");
+                options.addArguments("--incognito");
                 driver= new ChromeDriver(options);
                 driver.manage().window().maximize();
                 System.out.println( "The Chrome Driver is opened.");
