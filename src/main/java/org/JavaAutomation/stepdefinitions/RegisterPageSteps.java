@@ -1,7 +1,6 @@
 package org.JavaAutomation.stepdefinitions;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.When;
 import org.JavaAutomation.managers.DriverManager;
 import org.JavaAutomation.managers.RandomDataManager;
 import org.JavaAutomation.pageobjects.RegisterPage;
@@ -12,6 +11,7 @@ import java.util.Map;
 public class RegisterPageSteps {
     WebDriver driver = DriverManager.getInstance().getDriver();
     RegisterPage registerPage = new RegisterPage(driver);
+
     @And("the register form is populated with data")
     public void theRegisterFormIsPopulatedWithData() {
 // Generate random data
@@ -20,42 +20,34 @@ public class RegisterPageSteps {
         String email = RandomDataManager.getRandomEmail();
         String password = RandomDataManager.getRandomPassword();
         // Action on the Register page
-        registerPage.completeTheRegisterForm( firstName, lastName, email, password);
-    }
-    @And("the privacy toggle bar is enabled")
-    public void thePrivacyToggleBarIsEnabled() {
-        registerPage.enableTheToggleBar();
-    }
-    @When("the continue Button is clicked")
-    public void theContinueButtonIsClicked() {
-        registerPage.clickOnTheContinueButton();
+        registerPage.completeTheRegisterForm(firstName, lastName, email, password);
     }
 
     @And("the register form is populated as following:")
-    public void theRegisterFormIsPopulatedAsFollowing( Map<String, String> userDetailsMap) {
-        String firstNameValue=userDetailsMap.get("firstName");
-        if (firstNameValue != null && firstNameValue.toUpperCase().equals("RANDOM")){
-            firstNameValue=RandomDataManager.getRandomFirstName();
+    public void theRegisterFormIsPopulatedAsFollowing(Map<String, String> userDetailsMap) {
+        String firstNameValue = userDetailsMap.get("firstName");
+        if (firstNameValue != null && firstNameValue.toUpperCase().equals("RANDOM")) {
+            firstNameValue = RandomDataManager.getRandomFirstName();
         }
 
 
-        String lastNameValue= userDetailsMap.get("lastName");
-        if(lastNameValue !=null && lastNameValue.toUpperCase().equals("RANDOM")){
-            lastNameValue=RandomDataManager.getRandomLastName();
+        String lastNameValue = userDetailsMap.get("lastName");
+        if (lastNameValue != null && lastNameValue.toUpperCase().equals("RANDOM")) {
+            lastNameValue = RandomDataManager.getRandomLastName();
         }
 
         String emailValue = userDetailsMap.get("email");
-        if (emailValue!=null && emailValue.toUpperCase().equals("RANDOM")){
-            emailValue=RandomDataManager.getRandomEmail();
+        if (emailValue != null && emailValue.toUpperCase().equals("RANDOM")) {
+            emailValue = RandomDataManager.getRandomEmail();
         }
 
         String passwordValue = userDetailsMap.get("password");
-        if (passwordValue!=null && passwordValue.toUpperCase().equals("RANDOM")){
+        if (passwordValue != null && passwordValue.toUpperCase().equals("RANDOM")) {
             passwordValue = RandomDataManager.getRandomPassword();
         }
 
 
-        registerPage.completeTheRegisterForm(firstNameValue,lastNameValue,emailValue,passwordValue);
+        registerPage.completeTheRegisterForm(firstNameValue, lastNameValue, emailValue, passwordValue);
 
     }
 
