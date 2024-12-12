@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/main/java/org/JavaAutomation/features",
         glue = "org.JavaAutomation.stepdefinitions",
-        tags= "@run"
+        tags= ""
 )
 public class CucumberTestRunner {
 }

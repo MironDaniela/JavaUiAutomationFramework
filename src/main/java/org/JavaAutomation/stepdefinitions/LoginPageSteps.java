@@ -1,7 +1,6 @@
 package org.JavaAutomation.stepdefinitions;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.When;
 import org.JavaAutomation.managers.DriverManager;
 import org.JavaAutomation.pageobjects.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -17,8 +16,4 @@ LoginPage loginPage = new LoginPage(driver);
     loginPage.completeLoginForm(collectedDataList.get(0), collectedDataList.get(1));
     }
 
-    @When("the loginButton is clicked")
-    public void theLoginButtonIsClicked() {
-    loginPage.clickTheLoginButton();
-    }
 }

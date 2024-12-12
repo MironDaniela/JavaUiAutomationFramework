@@ -1,23 +1,22 @@
 package org.JavaAutomation.pageobjects;
-
-import org.JavaAutomation.managers.ScrollManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class RegisterPage extends Page{
-    public RegisterPage(WebDriver driver){
+public class RegisterPage extends Page {
+    public RegisterPage(WebDriver driver) {
         super(driver);
     }
-@FindBy(id = "input-firstname")
+
+    @FindBy(id = "input-firstname")
     private WebElement firstNameInput;
 
     @FindBy(id = "input-lastname")
     private WebElement lastNameInput;
 
-    @FindBy(id= "input-email")
+    @FindBy(id = "input-email")
     private WebElement emailInput;
-    @FindBy(css ="#input-password")
+    @FindBy(css = "#input-password")
     private WebElement passwordInput;
 
     @FindBy(name = "agree")
@@ -32,19 +31,8 @@ public class RegisterPage extends Page{
         lastNameInput.sendKeys(lastName);
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
-        System.out.println("The form was completed :" + " Firstname: " + firstName +  ", Lastname: "  +  lastName +  ", Email: "  + email +  ", Password: "  + password);
+        System.out.println("The form was completed :" + " Firstname: " + firstName + ", Lastname: " + lastName + ", Email: " + email + ", Password: " + password);
 
-        }
-
-        public void enableTheToggleBar(){
-            ScrollManager.scrollToElement(privacyToggleBar);
-        privacyToggleBar.click();
-
-        }
-
-        public void clickOnTheContinueButton(){
-        ScrollManager.scrollToElement(continueButton);
-        continueButton.click();
-
-        }
+    }
 }
+

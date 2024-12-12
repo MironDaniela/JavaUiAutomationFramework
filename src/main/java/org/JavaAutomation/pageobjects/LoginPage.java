@@ -21,10 +21,5 @@ public class LoginPage extends Page {
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
 
-
     }
-    public void clickTheLoginButton(){
-        loginButton.click();
-    }
-
 }
